@@ -129,6 +129,72 @@
         font-style: bold;
     }
 
+     .glow-on-hover {
+          position:absolute; 
+          top:20px; 
+          left:880px;
+          font-size: 21px;
+          width: 200px;
+          height: 45px;
+          border: none;
+          outline: none;
+          color: #fff;
+          background: black;
+          cursor: pointer;
+          /*position: relative;*/
+          z-index: 0;
+          border-radius:30px;
+        border: 1px double #cccccc;
+        opacity: 0.85;
+      }
+
+      .glow-on-hover:before {
+          content: '';
+          background: linear-gradient(45deg, #e6171788, #e06e11f3, #fcf823c5, #5eee25c4, #2af5d3a1, #2546ebad, #923cee86, #d41ead83, #e6171788);
+          position: absolute;
+          top: -2px;
+          left:-2px;
+          background-size: 400%;
+          z-index: -1;
+          filter: blur(5px);
+          width: calc(100% + 10px);
+          height: calc(100% + 10px);
+          animation: glowing 20s linear infinite;
+          opacity: 0;
+          transition: opacity .3s ease-in-out;
+          border-radius: 30px;
+      }
+
+      .glow-on-hover:active {
+          color: #191919
+      }
+
+      .glow-on-hover:active:after {
+          background: transparent;
+      }
+
+      .glow-on-hover:hover:before {
+          opacity: 1;
+      }
+
+      .glow-on-hover:after {
+          z-index: -1;
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: #111;
+          left: 0;
+          top: 0;
+          border-radius: 30px;
+      }
+
+      @keyframes glowing {
+          0% { background-position: 0 0; }
+          50% { background-position: 400% 0; }
+          100% { background-position: 0 0; }
+      }
+
 
 
     </style>
@@ -172,7 +238,17 @@
           </div>
         </div> -->
 
-       <img id=img src="jpl_logo.gif" width="400" height="240" style="position:absolute; TOP:100px; LEFT:820px;">
+       <img id=img src="jpl_logo.gif" width="400" height="240" style="position:absolute; TOP:100px; LEFT:850px;">
+
+        <div style="text-align: center">
+          <button id="home" class="glow-on-hover" type="button">Go to Home</button>
+        </div>
+
+        <script type="text/javascript">
+          document.getElementById("home").onclick = function () {
+            location.href = "../index.html";};
+        </script>
+
 
         <div>
           <span id="input">Anomaly Detection Algorithm</span>
