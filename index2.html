@@ -204,9 +204,9 @@
         summaryData = data;
       });
 
-      d3.csv("data/sample_500.csv", function(error, data) {
-        dotData = data;
-      });
+      // d3.csv("data/sample_500.csv", function(error, data) {
+      //   dotData = data;
+      // });
 
       d3.csv("data/donut_mean.csv", function(error, data) {
         donutData = data;
@@ -274,7 +274,11 @@
 
       d3.csv("data/donut_kmeans.csv", function(error, data) {
         clusterData = data;
-        updateTable("Isolation Forest",0,101);
+        d3.csv("data/sample_500.csv", function(error, data) {
+          dotData = data;
+          updateTable("Isolation Forest",0,101);
+        });
+        
       });
 
       var sliderRange = d3
