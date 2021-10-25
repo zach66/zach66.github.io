@@ -1,568 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>jpl-msia-project</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/lightbox.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link id="css-preset" href="css/presets/preset7.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-
-
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="images/favicon.ico">
-  <style>
-      /*demo css*/
-      .glow-on-hover {
-          font-size: 21px;
-          width: 220px;
-          height: 50px;
-          border: none;
-          outline: none;
-          color: #fff;
-          background: black;
-          cursor: pointer;
-          position: relative;
-          z-index: 0;
-          border-radius:20px;
-        border: 1px double #cccccc;
-        opacity: 0.85;
-      }
-
-      .glow-on-hover:before {
-          content: '';
-          background: linear-gradient(45deg, #e6171788, #e06e11f3, #fcf823c5, #5eee25c4, #2af5d3a1, #2546ebad, #923cee86, #d41ead83, #e6171788);
-          position: absolute;
-          top: -2px;
-          left:-2px;
-          background-size: 400%;
-          z-index: -1;
-          filter: blur(5px);
-          width: calc(100% + 10px);
-          height: calc(100% + 10px);
-          animation: glowing 20s linear infinite;
-          opacity: 0;
-          transition: opacity .3s ease-in-out;
-          border-radius: 30px;
-      }
-
-      .glow-on-hover:active {
-          color: #191919
-      }
-
-      .glow-on-hover:active:after {
-          background: transparent;
-      }
-
-      .glow-on-hover:hover:before {
-          opacity: 1;
-      }
-
-      .glow-on-hover:after {
-          z-index: -1;
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background: #111;
-          left: 0;
-          top: 0;
-          border-radius: 30px;
-      }
-
-      @keyframes glowing {
-          0% { background-position: 0 0; }
-          50% { background-position: 400% 0; }
-          100% { background-position: 0 0; }
-      }
-  </style>
-</head><!--/head-->
+  <title>Zach Zhu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="zach_pic.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.bundle.css">
+  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+</head>
 
 <body>
-
-  <!--.preloader-->
-  <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
-  <!--/.preloader-->
-
-  <header id="home">
-    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="item active" style="background-image: url(images/slider/1.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">NASA JPL Magnetosphere Project</h1>
-           <!--  <p class="animated fadeInRightBig">Northwestern University MSiA2020 GJSZ Present</p> -->
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#portfolio">Start now</a>
-          </div>
-        </div>
-        <!-- <div class="item" style="background-image: url(images/slider/2.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Led by NASA JPL Senior Data Scientist<span>Valentino Constaninou</span></h1>
-            <p class="animated fadeInRightBig">Northwestern University MSiA2020 GJSZ Present</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
-          </div>
-        </div> -->
-        <div class="item" style="background-image: url(images/slider/3.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Are you Ready?</h1>
-            <p class="animated fadeInRightBig">to own a wonderful experience of exploring the magnetosphere </p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#portfolio">Start now</a>
-          </div>
-        </div>
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <div class="navbar-item is-hidden-desktop">
+        <a href="https://github.com/zekaizhu" class="icon is-large has-text-light">
+          <i class="fab fa-2x fa-github"></i>
+        </a>
       </div>
-      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
-     <!--  <a id="tohash" href="#portfolio"><i class="fa fa-angle-down"></i></a> -->
-
-    </div><!--/#home-slider-->
-    <div class="main-nav">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">
-            <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
+      <div class="navbar-item is-hidden-desktop">
+        <a href="mailto:zachzhu@u.northwestern.edu" class="icon is-large has-text-light">
+          <i class="fas fa-2x fa-envelope"></i>
+        </a>
+      </div>
+      <div class="navbar-item is-hidden-desktop">
+        <a href="https://www.linkedin.com/in/zazhu/" class="icon is-large has-text-light">
+          <i class="fab fa-2x fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a href="https://github.com/zekaizhu" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-github"></i>
           </a>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="scroll active"><a href="#home">Home</a></li>
-            <li class="scroll"><a href="#about-us">Overview</a></li>
-            <li class="scroll"><a href="#portfolio">Interactive Dashboard</a></li>
-            <li class="scroll"><a href="#team">Team</a></li>
-            <li class="scroll"><a href="#blog">Blog</a></li>
-          </ul>
+        <div class="navbar-item">
+          <a href="mailto:zachzhu@u.northwestern.edu" class="icon is-large has-text-light">
+            <i class="fas fa-2x fa-envelope"></i>
+          </a>
         </div>
-      </div>
-    </div><!--/#main-nav-->
-  </header><!--/#home-->
-
-
-  <section id="about-us" class="parallax">
-    <div class="container">
-      <div class="row">
-        <!-- <div class="col-sm-6"> -->
-          <div class="about-info text-left wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>Project Statement</h2>
-            <p style="font-size:18px;">The goal of this project is to analyze the estimations of the magnetosphere in order to explore and characterize both typical and atypical behavior in the physical system by applying data mining and visualization tools on the predicted electromagnetic density values. Specifically, we used unsupervised learning methods (K-means) and four anomaly detection algorithms for our analysis. </p>
-            <p style="font-size:18px;">Our major deliverable is this website with an interactive visualization dashboard that helps scientists and students to navigate the magnetosphere activities across time.  </p>
-          </div>
+        <div class="navbar-item">
+          <a href="https://www.linkedin.com/in/zazhu/" class="icon is-large has-text-light">
+            <i class="fab fa-2x fa-linkedin-in"></i>
+          </a>
         </div>
       </div>
     </div>
-  </section><!--/#about-us-->
+  </nav>
 
-<section id="portfolio" >
-    <div class="container" >
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <h2>Interactive Dashboard</h2>
-          <p>By choosing different algorithms and time ranges and clicking and hovering over the grids, users are able to see the magnetosphere at different granularity levels and focus on the parts they are mostly interested in, including clusters, concentric views, individual coordinates, as well as the anomalies.</p>
-        </div>
-
-        <div style="text-align: center">
-          <button id="demo" class="glow-on-hover" type="button">Go to Dashboard</button>
-        </div>
-
-      </div>
-    </div>
-    <script type="text/javascript">
-      document.getElementById("demo").onclick = function () {
-        location.href = "dashboard.html";};
-    </script>
-
-     <br>
-     </br>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-5">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/portfolio/1.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Control</h3>
-                    <p>Dropdown menu and slider</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio1.html" ><i class="fa fa-link"></i></a></span>
-                  <!--   <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-5">
-          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/portfolio/2.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Heatmap</h3>
-                    <p>Clusters for each donut</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio2.html" ><i class="fa fa-link"></i></a></span>
-                  <!--   <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-5">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/portfolio/3.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Donut Visualizations</h3>
-                    <p>According to selected timestep</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio3.html" ><i class="fa fa-link"></i></a></span>
-                   <!--  <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-5">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/portfolio/4.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                   <h3>Donut Visualizations</h3>
-                    <p>According to selected timestep</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio4.html" ><i class="fa fa-link"></i></a></span>
-                    <!-- <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-5">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/portfolio/5.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                   <h3>Trend Analysis</h3>
-                    <p>According to selected timesteps</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio5.html" ><i class="fa fa-link"></i></a></span>
-                    <!-- <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="portfolio-single-wrap">
-      <div id="portfolio-single">
-      </div>
-    </div><!-- /#portfolio-single-wrap -->
-  </section><!--/#portfolio-->
-
-  <section id="team">
-    <div class="container">
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>The Team</h2>
-          <p>The team is led by NASA JPL Senior Data Scientist Valentino Constantinou and comprised of four graduate students from MSiA Northwestern University</p>
-        </div>
-      </div>
-      <div class="team-members">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="100ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/1.png" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Valentino Constantinou</h3>
-                <h4>NASA JPL Data Scientist III</h4>
-                <p>MSiA alumni</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <!-- <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> -->
-                  <li><a class="linkedin" href="https://www.linkedin.com/in/vconstantinou/"><i class="fa fa-linkedin"></i></a></li>
-            <!--       <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
-                 <!--  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/2.png" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Aditya Gudal</h3>
-                <h4>MSiA Student</h4>
-                <p>Class 2020</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                 <!--  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> -->
-                  <li><a class="linkedin" href="https://www.linkedin.com/in/aditya-gudal/"><i class="fa fa-linkedin"></i></a></li>
-              <!--     <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
-                  <!-- <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/3.png" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Rui Ju</h3>
-                <h4>MSiA Student</h4>
-                <p>Class 2020</p>
-
-              </div>
-              <div class="social-icons">
-                <ul>
-                 <!--  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> -->
-                  <li><a class="linkedin" href="https://www.linkedin.com/in/rui-ju/"><i class="fa fa-linkedin"></i></a></li>
-             <!--      <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
-                <!--   <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/4.png" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Greesham Simon</h3>
-                <h4>MSiA Student</h4>
-                <p>Class 2020</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-              <!--     <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> -->
-                  <li><a class="linkedin" href="https://www.linkedin.com/in/greesham-simon/"><i class="fa fa-linkedin"></i></a></li>
-                 <!--  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
-                  <!-- <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1000ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/5.png" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Zach Zhu</h3>
-                <h4>MSiA Student</h4>
-                <p>Class 2020</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <!-- <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> -->
-                  <li><a class="linkedin" href="https://www.linkedin.com/in/zazhu/"><i class="fa fa-linkedin"></i></a></li>
-                  <!-- <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
-                  <!-- <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section><!--/#team-->
-
-
-  <section id="blog">
-    <div class="container">
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>MSiA Student Research Blog</h2>
-          <p>https://sites.northwestern.edu/msia/2020/06/19/nasa-jpl-magnetosphere-project/</p>
-        </div>
-      </div>
-      <div class="blog-posts">
-        <div class="row">
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="post-thumb">
-              <a href="https://sites.northwestern.edu/msia/2020/06/19/nasa-jpl-magnetosphere-project/"><img class="img-responsive" src="images/blog/1.jpg" alt="" ></a>
-              <div class="post-meta">
-                <span><i class="fa fa-comments-o"></i> 0 Comments</span>
-                <span><i class="fa fa-heart"></i> 0 Likes</span>
-              </div>
-              <div class="post-icon">
-                <i class="fa fa-pencil"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="https://sites.northwestern.edu/msia/2020/06/19/nasa-jpl-magnetosphere-project/">NASA JPL Magnetosphere Project</a></h3>
-              <span class="date">June 19, 2020</span>
-              <!-- <span class="cetagory">in <strong>Photography</strong></span> -->
-            </div>
-            <div class="entry-content">
-              <p>Check out more interesting MSiA researches in the blog</p>
-            </div>
-          </div>
-         <!--  <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="post-thumb">
-              <div id="post-carousel"  class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#post-carousel" data-slide-to="1"></li>
-                  <li data-target="#post-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <a href="#"><img class="img-responsive" src="images/blog/2.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/blog/1.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
-                  </div>
-                </div>
-                <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-              </div>
-              <div class="post-meta">
-                <span><i class="fa fa-comments-o"></i> 3 Comments</span>
-                <span><i class="fa fa-heart"></i> 0 Likes</span>
-              </div>
-              <div class="post-icon">
-                <i class="fa fa-picture-o"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-              <span class="date">June 26, 2014</span>
-              <span class="cetagory">in <strong>Photography</strong></span>
-            </div>
-            <div class="entry-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
-            <div class="post-thumb">
-              <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
-              <div class="post-meta">
-                <span><i class="fa fa-comments-o"></i> 3 Comments</span>
-                <span><i class="fa fa-heart"></i> 0 Likes</span>
-              </div>
-              <div class="post-icon">
-                <i class="fa fa-video-camera"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-              <span class="date">June 26, 2014</span>
-              <span class="cetagory">in <strong>Photography</strong></span>
-            </div>
-            <div class="entry-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-          </div>
-        </div>
-        <div class="load-more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-          <a href="#" class="btn-loadmore"><i class="fa fa-repeat"></i> Load More</a>
-        </div>
-      </div> -->
-    </div>
-  </section><!--/#blog-->
-
-
-  <footer id="footer">
-    <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-      <div class="container text-center">
-        <div class="footer-logo">
-          <a href="index.html"><img class="img-responsive" src="images/logo.png" alt=""></a>
-        </div>
-        <div class="social-icons">
-          <ul>
-         <!--    <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li> -->
-            <li><a class="twitter" href="https://twitter.com/nu_analytics?lang=en"><i class="fa fa-twitter"></i></a></li>
-           <!--  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
-            <li><a class="facebook" href="https://www.facebook.com/NorthwesternUniversityAnalytics/"><i class="fa fa-facebook"></i></a></li>
-            <li><a class="linkedin" href="https://www.linkedin.com/company/mccormick-school-of-engineering"><i class="fa fa-linkedin"></i></a></li>
-<!--             <li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li> -->
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
+  <section class="hero is-primary">
+    <div class="hero-body">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <p>&copy; 2020 Northwestern University MSiA.</p>
+        <div class="level">
+          <div class="level-item has-text-centered">
+            <figure class="image is-128x128">
+              <img class="is-rounded" src="img/zach_pic.png">
+            </figure>
           </div>
-       <!--    <div class="col-sm-6">
-            <p class="pull-right">Designed by <a href="http://www.themeum.com/">Themeum</a></p>
-          </div> -->
+        </div>
+        <div class="columns has-text-centered">
+          <div class="column">
+            <h1 class="title is-1">
+              Zach Zhu
+            </h1>
+            <h2 class="subtitle">
+              Product Analytics and Data Science
+            </h2>
+            <p>
+              <a href="docs/cv_zachzhu.pdf" class="icon has-text-light">
+                <i class="fas fa-file-word"></i> <strong>Resume</strong>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">About Me</h1>
+      <hr />
+      <p>Hi! I'm Zach.<br>
+
+        <br>
+        I have a BS in Financial Engineering and Actuarial Science and a MSc in Analytics. I always believe data science is the future to build great products and I aspire to become a product lead in tech to tell compelling data stories and deliver inspiring and innovative products to users.
+        
+       <br><br>
+
+        Thanks for checking out my profile and Please feel free to to contact me at <a href="mailto:zachzhu@u.northwestern.edu">zachzhu@u.northwestern.edu</a>.
+    </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Experience</h1>
+      <hr />
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="img/pin-logo.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Pinterest</p>
+              <p class="subtitle is-6">Product Analyst, San Francisco, CA, <time datetime="2021-2">February 2021</time> - <time
+                  datetime="2021-12">Present</time> </p>
+            </div>
+          </div>
+          <div class="content">
+            <ul>
+               <li>Perform deep dive analysis using SQL and Python to understand and optimize the key levers of the search and shopping products; search query clustering analysis to detect user intent of shopping and people search; user segmentation and module analysis to understand shopping and curated content impact to different user segment; construct regression models to understand relationship between users engagement with search products and long term retention; Help achieve team key OKRs by the end of Q3 and proposed new target goal</li>
+              <li>Design success and guardrail metrics that serve as the North Stars for the team efforts and model trade-off decisions across product areas</li>
+              <li>Create compelling experiment jupyter reports to better interpret results of A/B experiments and inform launch review decisions</li>
+              <li>Design workflow and data lineage to generate downstream tables which can be used for reporting metrics on dashboard and data analysis</li>
+              <li>Perform frontend logging audit, metrics drop investigation, and user case study to ensure data quality and identify product opportunities</li>
+              <li>Work with product managers and engineers to design data products, prove their value by running experiments and release into production</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">SQL</span>
+              <span class="tag">Python</span>
+              <span class="tag">Dashboard</span>
+              <span class="tag">Product Analytics</span>
+              <span class="tag">A/B Experiment</span>
+              <span class="tag">Workflow</span>
+              <span class="tag">Product</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-gap">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="img/pr-logo.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Principal Financial Group</p>
+              <p class="subtitle is-6">Data Scientist Consultant, Chicago, IL, <time datetime="2020-9">September 2020</time> - <time
+                  datetime="2020-11">November 2020</time> </p>
+            </div>
+          </div>
+          <div class="content">
+            <p>Northwestern MSiA industry capstone project</p>
+            <ul>
+              <li>Optimized investments portfolio by adding new objective functions and constraints to minimize tracking error between asset and liability</li>
+              <li>Embedded the optimization pipeline in an interactive website for user to obtain the optimized investment portfolio in Python (Dash and Flask)</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Finance</span>
+              <span class="tag">Investment</span>
+              <span class="tag">Dashboard</span>
+              <span class="tag">UI</span>
+              <span class="tag">Python</span>
+              <span class="tag">Dash</span>
+              <span class="tag">Flask</span>    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-gap">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="img/li-logo.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">LinkedIn</p>
+              <p class="subtitle is-6">Data Scientist Intern,  Sunnyvale, CA,  <time datetime="2020-6">June 2020</time> - <time
+                  datetime="2020-9">September 2020, </time></p>
+            </div>
+          </div>
+          <div class="content">
+            <ul>
+              <li>Leveraged Presto, Hive, Python, and Spark to analyze massive amounts of data of app activation, notifications, sessions, and members, etc.</li>
+              <li>Employed machine learning classification model to understand the relationship between 110 million infrequent members’ email click and member life cycle upshift; proposed most valuable emails to be prioritized for the next two quarters of email edge building strategy</li>
+              <li>Conducted deep dive analysis of onboarding flow to improve email confirmation that will largely lift long-term weekly active users; identified emails with deep link issues that mostly impact members’ mobile experience and persuaded engineers to fix the problem</li>
+              <li>Performed funnel analysis of phone address book imports to find massive opportunities to optimize recommendation for connection and help infrequent members connect with frequent members; worked with product and engineering teams to drive corresponding experiments</li>
+              <li>Migrated metric datasets by running flows on Azkaban to cope with changing data schemas and designed metrics reporting dashboards</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Consumer Analytics</span>
+              <span class="tag">Predictive Modeling</span>
+              <span class="tag">Product Analytics</span>
+              <span class="tag">Strategy</span>
+              <span class="tag">Funnel Analysis</span>
+              <span class="tag">Retention</span>
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Spark</span>
+              <span class="tag">Looker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <div class="card card-gap">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="img/jpl-logo.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">NASA Jet Propulsion Laboratory</p>
+              <p class="subtitle is-6">Data Science Researcher, Pasadena, CA, <time datetime="2019-10">October 2019</time> - <time
+                  datetime="2020-6">June 2020</time></p>
+            </div>
+          </div>
+          <div class="content">
+            <ul>
+              <li>Conducted EDA and 3D visualization using Python on 10GB electron number density data collected from THEMIS probes to explore typical and unusual behavior in the physical system</li>
+              <li>Detected repetitive cycles and anomalies by applying data mining and clustering techniques (Anomaly detection algorithms and K-means) to help increase accuracy for future disturbance prediction</li>
+              <li>Built an interactive web dashboard to visualize the clusters by leveraging D3.js and HTML</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Time Series</span>
+              <span class="tag">Dashboard</span>
+              <span class="tag">k-means</span>
+              <span class="tag">Python</span>
+              <span class="tag">D3.js</span>
+              <span class="tag">HTML</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-gap">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="img/tu-logo.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">TransUnion</p>
+              <p class="subtitle is-6">Analytics Consultant, Chicago, IL, <time datetime="2019-9">September 2019</time> - <time
+                  datetime="2020-6">June 2020</time></p>
+            </div>
+          </div>
+          <div class="content">
+              <p>Northwestern MSiA industry practicum project</p>
+            <ul>
+              <li>Employed XGBoost to develop credit risk models using 1500 attributes of credit risk reports to measure potential lift in the prediction of account delinquency; elevated the AUC score of the benchmark model by 2% with the addition of macroeconomic predictors</li>
+              <li>Performed mapping visualization of quarterly data in R (ggplot): number of new accounts opened and bad rate for each county and MSA</li>
+              <li>Leveraged multivariate time series model VAR and LSTM to predict macroeconomic trends using key consumer credit attributes; employed forward chaining to validate the models and achieved less than 0.5 RMSE in the prediction of fraud-related macroeconomic indices</li>
+            <div class="tags">
+               <span class="tag">Classification</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">Credit Risk</span>
+              <span class="tag">R</span>
+              <span class="tag">Time Series</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Selected Projects</h1>
+      <hr />
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-12">
+          <div class="tile">
+            <div class="tile is-parent">
+              <article class="tile is-child notification">
+                <p class="title">Mask On - Clinical/N95 Face Mask Detection</p>
+                <a href="https://github.com/zekaizhu/mask-on">
+                <figure class="image is-3by2">
+                  <img src="img/face-mask-cover.png">
+                </figure>
+               </a>
+              </article>
+
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification">
+                <p class="title">Spotify Top Songs - Data Visualization with D3.js</p>
+                <figure class="image is-3by2">
+                  <a href="https://github.com/zekaizhu/Spotify-Data-Visualization">
+                  <img src="img/spotify-cover.png">
+                </figure>
+                </a>
+              </article>
+            </div>
+           <!--  <div class="tile is-parent">
+              <article class="tile is-child notification">
+                <p class="title">House Retrofiting Image Classification</p>
+                <figure class="image is-3by2">
+                  <a href="https://github.com/zekaizhu/House-Retrofiting-Classification">
+                  <img src="img/house.png">
+                </figure>
+              </article>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-12">
+          <div class="tile">
+            <div class="tile is-parent">
+              <article class="tile is-child notification">
+                <p class="title">New York City Property Price Prediction</p>
+                <figure class="image is-3by2">
+                  <a href="https://github.com/zekaizhu/Property-Price-Prediction">
+                  <img src="img/nyc.png">
+                </figure>
+              </a>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification">
+                <p class="title">COVID-19 Text Sentiment Classification</p>
+                <figure class="image is-3by2">
+                  <a href="https://github.com/zekaizhu/Tweet-Text-Sentiment-Classification">                  
+                  <img src="img/covid.png">
+                </figure>
+              </a>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification">
+                <p class="title">NASA JPL Magnetosphere Project</p>
+                <figure class="image is-3by2">
+                  <a href="https://sites.northwestern.edu/msia/2020/06/19/nasa-jpl-magnetosphere-project/">                  
+                  <img src="img/nasa.png">
+                </figure>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Education</h1>
+      <hr />
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <p class="title is-4">Northwestern University</p>
+            <p class="subtitle is-6"><a href="https://www.mccormick.northwestern.edu/analytics/">M.S. in Analytics</a> - <time datetime="2019-9">September 2019</time> - <time
+                datetime="2020-12">December 2020</time></p>
+          </div>
+          <div class="content">
+            <li>GPA: 3.9/4.0</li>
+            <li>
+            <b> Coursework </b>: Predictive Analytics, Data Visualization, Data Mining, Databases, Text Analytics, Big Data Analytics (Hadoop & Spark), Analytics Value Chain (Data Science Pipeline), Deep Learning, Data Warehousing, Social Network Analysis
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="card card-gap">
+        <div class="card-content">
+          <div class="content">
+            <p class="title is-4">Soochow University, Taipei, Taiwan</p>
+            <p class="subtitle is-6"><a href="https://www-en.scu.edu.tw/">B.B.A in Financial Engineering and Actuarial Mathematics </a> - <time datetime="2015-9">September 2015</time> - <time
+                datetime="2019-6">June 2019</time></p>
+          </div>
+          <div class="content">
+             <li>GPA: 4.0/4.0</li>
+             <li>Dean’s List for all semesters attended and graduated with honor</li>
+             <li>Society of Actuaries (SOA): Exam: Financial Mathematics, Probability; VEE: Corporate Finance, Applied Statistics</li>
+            
+            
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Contact</h1>
+      <hr />
+      <nav class="level">
+        <div class="level-item has-text-centered">
+          <div>
+            <a href="https://github.com/zekaizhu" class="icon is-large">
+              <i class="fab fa-2x fa-github"></i>
+            </a>
+            <p class="heading"><a href="https://github.com/zekaizhu">github</a></p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <a href="mailto:zachzhu@u.northwestern.edu" class="icon is-large">
+              <i class="fas fa-2x fa-envelope"></i>
+            </a>
+            <p class="heading"><a href="mailto:zachzhu@u.northwestern.edu">email</a></p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <a href="https://www.linkedin.com/in/zazhu/" class="icon is-large">
+              <i class="fab fa-2x fa-linkedin-in"></i>
+            </a>
+            <p class="heading"><a href="https://www.linkedin.com/in/zazhu/">linkedin</a></p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <a href="https://www.instagram.com/zach_zhu/" class="icon is-large">
+              <i class="fab fa-2x fa-instagram"></i>
+            </a>
+            <p class="heading"><a href="https://www.instagram.com/zach_zhu/">Instagram</a></p>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <!-- <a href="https://github.com/mmacneil/devfolio" target="_blank" class="icon has-text-primary">
+          <i class="fab fa-github"></i> <strong>devfolio</strong></a> -->
+      </p>
     </div>
   </footer>
 
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  <script type="text/javascript" src="js/jquery.inview.min.js"></script>
-  <script type="text/javascript" src="js/wow.min.js"></script>
-  <script type="text/javascript" src="js/mousescroll.js"></script>
-  <script type="text/javascript" src="js/smoothscroll.js"></script>
-  <script type="text/javascript" src="js/jquery.countTo.js"></script>
-  <script type="text/javascript" src="js/lightbox.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-
+  <script src="js/bundle.js"></script>
 </body>
+
 </html>
